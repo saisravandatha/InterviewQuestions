@@ -10,7 +10,6 @@ import java.util.stream.Collectors;
 public class DuplicateNumbers {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		List<Integer> list = Arrays.asList(1,2,3,10,20,30,20,20,34,98,89,90,87,89);
 		
 		Set<Integer> sup = list.stream().

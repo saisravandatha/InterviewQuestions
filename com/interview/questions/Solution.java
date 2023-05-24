@@ -16,7 +16,6 @@ public class Solution {
 	        }
 	    }
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int[] nums = {5,0,1,2,3,4};
 		//buildArray(nums);
 		List<Integer> numbers = Arrays.asList(87,9,29,99,100);

@@ -15,7 +15,6 @@ public class DuplicateCharactersInString {
 	}
 
 	private static Set<Character> findDuplicateUsingFor(String string) {
-		// TODO Auto-generated method stub
 		Set<Character> characterDuplicates = new LinkedHashSet<>();
 		for (int i = 0; i < string.length(); i++) {
 			for (int j = i + 1; j < string.length(); j++) {
@@ -28,7 +27,6 @@ public class DuplicateCharactersInString {
 	}
 	
 	private static Set<Character> findDuplicateUsingArrays(String string) {
-		// TODO Auto-generated method stub
 		Set<Character> characterDuplicates = new LinkedHashSet<>();
 		int[] arrayForChar = new int[256];
 		for(int i=0; i<string.length();i++) {
@@ -44,7 +42,6 @@ public class DuplicateCharactersInString {
 	}
 	
 	private static Set<String> findDuplicateUsingStreams(String string) {
-		// TODO Auto-generated method stub
 		Set<String> characterDuplicates = Arrays.asList(string.split("")).stream()
 		.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()))
 		.entrySet().stream().filter( e -> e.getValue()>1).map(e -> e.getKey()).collect(Collectors.toSet());

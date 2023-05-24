@@ -32,7 +32,6 @@ public class StringRotation {
 	}
 
 	private static boolean CheckForRotation(String originalString,String toBeChecked) {
-		// TODO Auto-generated method stub
 		String contactedString = originalString + toBeChecked;
 		if(contactedString.contains(toBeChecked)) {
 			return true;
