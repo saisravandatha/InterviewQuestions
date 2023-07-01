@@ -206,5 +206,6 @@ public class FirstLetterOfStringToCapital {
 		FileWriter writer = new FileWriter("");
 		writer.write(map.toString());
 		writer.close();
+
 	}
 }

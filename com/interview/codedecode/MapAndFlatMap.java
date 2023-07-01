@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class MapAndFlatMap {
 
-//	How Map works in Java 8 
+//	How Map works in Java 8
 //
 //	The Stream.map() function performs map functional operation i.e. it takes a Stream and transforms it to another new Stream.
 //
@@ -40,6 +40,7 @@ public class MapAndFlatMap {
 		employeeList.add(e3);
 		employeeList.add(e4);
 
+
 		List<Integer> id = employeeList.stream()
 				.map(e -> e.getId()).collect(Collectors.toList());
 		System.out.println(id);
@@ -47,5 +48,10 @@ public class MapAndFlatMap {
 		System.out.println(employeeList.stream()
 		.flatMap(e -> e.getCitiesWorkedIn().stream())
 		.collect(Collectors.toSet()));
-		}
+
+		List<String> emplooyeeNames = employeeList.stream().map(Employee::getName).collect(Collectors.toList());
+	}
+
+
+
 }
