@@ -1,5 +1,7 @@
 package com.interview.streams;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -13,22 +15,9 @@ import java.util.stream.Collectors;
 public class EmployeeStreams {
 
 	public static void main(String[] args) {
-		List<Employee> listObj = new ArrayList<Employee>();
-		Employee e1  = new Employee("chaman", "gupta", 22,"IT",25000);
-		Employee e2  = new Employee("aman", "gupta", 24,"Sales",57000);
-		Employee e3  = new Employee("raj", "sharma", 28,"IT",30000);
-		Employee e4  = new Employee("mohit", "sharma", 28,"Marketing",34000);
-		Employee e5  = new Employee("ram", "gupta", 33,"Sales",30000);
-		Employee e6  = new Employee("suresh", "varma", 28,"Sales",57000);
+		List<Employee> listObj = getEmployeeList();
 
-		listObj.add(e1);
-		listObj.add(e2);
-		listObj.add(e3);
-		listObj.add(e4);
-		listObj.add(e5);
-		listObj.add(e6);
 		//Get employees who work in Sales Department and Salary above 50000
-
 		listObj.stream()
 				.filter(e -> e.getDepartment().equalsIgnoreCase("Sales") && e.getSalary()>50000)
 				.forEach(System.out::println);
@@ -70,5 +59,24 @@ public class EmployeeStreams {
 		final Map<Integer,List<String>> map = new TreeMap<>(words.stream().collect(Collectors.groupingBy(String::length)));
 		System.out.println(map);
 		System.out.println(words.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting())));
+	}
+
+	@NotNull
+	private static List<Employee> getEmployeeList() {
+		List<Employee> listObj = new ArrayList<>();
+		Employee e1  = new Employee("chaman", "gupta", 22,"IT",25000);
+		Employee e2  = new Employee("aman", "gupta", 24,"Sales",57000);
+		Employee e3  = new Employee("raj", "sharma", 28,"IT",30000);
+		Employee e4  = new Employee("mohit", "sharma", 28,"Marketing",34000);
+		Employee e5  = new Employee("ram", "gupta", 33,"Sales",30000);
+		Employee e6  = new Employee("suresh", "varma", 28,"Sales",57000);
+
+		listObj.add(e1);
+		listObj.add(e2);
+		listObj.add(e3);
+		listObj.add(e4);
+		listObj.add(e5);
+		listObj.add(e6);
+		return listObj;
 	}
 }

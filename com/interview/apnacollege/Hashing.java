@@ -8,7 +8,7 @@ public class Hashing {
     public static void main(String[] args) {
 
         //HashSet is a data structure which is very famous for its time complexity
-        //Inert - O(1), Search - O(1), Delete - O(1)
+        //Insert - O(1), Search - O(1), Delete - O(1)
         HashSet<Integer> set = new HashSet<>();
 
         //Insert

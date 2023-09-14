@@ -2,7 +2,7 @@ package com.interview.questions;
 
 import java.util.ArrayList;
 
-public class ArrayIndexEqualsToValue {
+public class exEqualsToValue {
 
 	static ArrayList<Integer> valueEqualToIndex(int arr[], int n) {
         ArrayList<Integer> integer = new ArrayList<>();
